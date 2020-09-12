@@ -1,5 +1,8 @@
 CMakeFiles/
 obj-*/
+/.vscode/
+/build*
+/.rocks
 CMakeCache.txt
 Makefile
 cmake_*.cmake
@@ -18,8 +21,6 @@ install_manifest.txt
 *.xlog*
 *~
 .gdb_history
-./build
-/build
 VERSION
 CTestTestfile.cmake
 Testing
