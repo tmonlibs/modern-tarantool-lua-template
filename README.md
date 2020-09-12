@@ -1,56 +1,47 @@
-<a href="http://tarantool.org">
-	<img src="https://avatars2.githubusercontent.com/u/2344919?v=2&s=250" align="right">
-</a>
-<a href="https://travis-ci.org/tarantool/modulekit">
-	<img src="https://travis-ci.org/tarantool/modulekit.png?branch=luakit" align="right">
-</a>
+![Build module](https://github.com/tmonlibs/modern-tarantool-lua-template/workflows/Build%20LuaRocks%20module%20for%20Tarantool/badge.svg)
 
-# Lua module template for Tarantool 1.6+
+# Lua module template for Tarantool 1.10+
 
 Use this template to create and publish a [Tarantool][] module written in pure
 Lua.
 
-**Note:** If you write a Tarantool module in C, see the [ckit][Ckit] branch of
-this repository.
-
 ## Table of contents
-* [Kit content](#kit-content)
-* [Prerequisites](#prerequisites)
-* [Examples](#examples)
-* [See also](#see-also)
+  - [Kit content](#kit-content)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+  - [Examples](#examples)
+  - [See also](#see-also)
 
 ## Kit content
 
   * `./README.md` - this file
-  * `./luakit/init.lua` - the Lua module itself, loaded with `require('luakit')`
-  * `./luakit-scm-1.rockspec` - a specification for the
+  * `./modern-tarantool-lua-template/init.lua` - the Lua module itself, loaded with `require('modern-tarantool-lua-template')`
+  * `./modern-tarantool-lua-template-scm-1.rockspec` - a specification for the
     [tarantool/rocks][TarantoolRocks] repository
   * `./test/luakit.test.lua` - tests for the module
   * `./rpm/` - files to build an RPM package
   * `./debian/` - files to build a DEB package
+  * `./.github/workflows/` - simplistic GitHub Actions workflows for CI
 
 ## Prerequisites
 
-Tarantool 1.6.8+ with header files (`tarantool` and `tarantool-dev` packages)
+Tarantool 1.10+ with header files (`tarantool` and `tarantool-dev` packages)
 
 ## Usage
 
 1. Clone this repository.
 
    ```bash
-   git clone https://github.com/tarantool/modulekit.git
+   git clone https://github.com/tmonlibs/modern-tarantool-lua-template.git
    ```
-   
-   The default branch is `luakit`, which is what you need for a module in pure
-   Lua.
 
 2. Rename all files to use your favorite name.
 
    For example, `mymodule`:
 
     ```bash
-    grep -R luakit .
-    mv luakit/ mymodule/
+    grep -R modern-tarantool-lua-template .
+    mv modern-tarantool-lua-template/ mymodule/
     mv test/luakit.test.lua test/mymodule.test.lua
     ...
     ```
